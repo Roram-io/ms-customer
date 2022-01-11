@@ -21,31 +21,31 @@ public class CustomerController {
     @GetMapping
     public Flux<Customer> getCustomers(){
         log.info("Listing all customers: ");
-        return null;
+        return customerService.listCustomers();
     }
 
     @GetMapping("/{id}")
     public Mono<Customer> getCustomerById(@PathVariable("id") String id){
         log.info("Searching customer with Id "+id);
-        return null;
+        return customerService.listById(id);
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public Mono<Customer> saveCustomer(@RequestBody Customer customer){
         log.info("Inserting a new customer");
-        return null;
+        return customerService.saveCustomer(customer);
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public Mono<Customer> updateCustomer(@RequestBody Customer customer){
         log.info("Updating the following Id: "+customer.getId());
-        return null;
+        return customerService.updateCustomer(customer);
     }
 
-    @DeleteMapping
-    public Mono<Void> removeCustomer(@RequestBody Customer customer){
-        log.info("Removing the following Customer: "+ customer);
-        return null;
+    @DeleteMapping("/delete/{id}")
+    public Mono<Void> removeCustomer(@PathVariable("id") String id){
+        log.info("Removing the following Customer: "+ id);
+        return customerService.removeCustomer(id);
     }
 
 
