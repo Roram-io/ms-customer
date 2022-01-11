@@ -8,11 +8,11 @@ public interface CustomerService {
 
     Flux<Customer> listCustomers();
 
-    Mono<Customer> listById();
+    Mono<Customer> listById(String id);
 
-    Mono<Customer> removeCustomer();
+    Mono<Void> removeCustomer(String id);
 
-    Mono<Customer> saveCustomer();
+    Mono<Customer> saveCustomer(Customer customer);
 
-    Mono<Customer> updateCustomer();
+    Mono<Customer> updateCustomer(Customer customer);
 }
