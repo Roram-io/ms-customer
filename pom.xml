@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nttdata</groupId>
-	<artifactId>customers</artifactId>
+	<artifactId>ms-customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>customers</name>
+	<name>ms-customer</name>
 	<description>Customers for week 1 project</description>
 	<properties>
 		<java.version>11</java.version>
