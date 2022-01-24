@@ -1,4 +1,4 @@
 FROM openjdk:11
-EXPOSE 8080
-ADD target/ms-customer.jar ms-customer.jar
-ENTRYPOINT ["java","-jar","/ms-customer.jar"]
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
