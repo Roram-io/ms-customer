@@ -15,6 +15,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+      - name: Setting Maven install
+        run:  mvn clean install
+      - uses: actions/checkout@master
       - name: Building Docker Image
         run: docker build . --file Dockerfile --tag roram/mscustomer
       - uses: actions/checkout@master
