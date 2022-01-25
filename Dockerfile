@@ -6,6 +6,6 @@ RUN mvn clean package
 
 FROM openjdk:11-jdk
 WORKDIR /usr/src/app
-COPY --from=build /usr/src/app/target/config-server-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=build /usr/src/app/target/ms-customer-0.0.1-SNAPSHOT.jar ./app.jar
 EXPOSE 8883
-ENTRYPOINT ["java","-jar","config-server.jar"]
+ENTRYPOINT ["java","-jar","ms-customer.jar"]
