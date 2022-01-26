@@ -3,8 +3,8 @@ spring:
     name: ms-customer
   cloud:
     config:
-      uri: http://52.191.83.157:8888
+      uri: http://52.226.144.128:8888
       username: admin
       password: nttdatacorazon
   config:
-    import: optional:configserver:http://52.191.83.157:8888
+    import: optional:configserver:http://52.226.144.128:8888
